@@ -20,19 +20,12 @@ This project simulates a procurement analytics solution for a manufacturing comp
 ## Dashboard Preview
 
 ### Executive Summary
-
 ![Executive Summary](screenshots/Executive%20Summary.png)
 
----
-
 ### Supplier Performance Analysis
-
 ![Supplier Performance Analysis](screenshots/Supplier%20Performance%20Analysis.png)
 
----
-
 ### Operational Performance Dashboard
-
 ![Operational Performance Dashboard](screenshots/Operational%20Performance%20Dashboard.png)
 
 ---
@@ -40,10 +33,12 @@ This project simulates a procurement analytics solution for a manufacturing comp
 ## Key Insights
 
 - Electrical Components account for the highest procurement spend.
-- Overall supplier score is 92.85 with an 89.10% on-time delivery rate.
+- Overall supplier score is 92.85, with an 89.10% on-time delivery rate.
 - Average supplier lead time is 2 days.
 - Defect rate remains low at 2.61%, indicating strong supplier quality.
 - Monthly procurement spend peaks during April and September.
+
+---
 
 ## Business Questions Solved
 
@@ -53,31 +48,25 @@ This project simulates a procurement analytics solution for a manufacturing comp
 - How does procurement spending change month over month?
 - Which suppliers require improvement based on KPIs?
 
+---
 
 ## Dashboard Pages
 
 ### Executive Summary
-
-- Total Spend
-- On-Time Delivery %
-- Defect Rate %
-- Average Lead Time
-- Overall Supplier Score
+- Total Spend, On-Time Delivery %, Defect Rate %, Average Lead Time, Overall Supplier Score (KPI cards)
 - Monthly Spend Trend
 - Spend by Category
-- Top Suppliers
-- Supplier Performance Scorecard
+- Top Suppliers by Spend
+- Supplier Performance Scorecard (table)
 
 ### Supplier Performance Analysis
-
-- Top 10 Suppliers
-- Bottom 10 Suppliers
-- Supplier Spend vs Performance Score
-- Procurement Spend by Category (Treemap)
+- Top 10 Suppliers by Performance Score
+- Bottom 10 Suppliers by Performance Score
+- Supplier Spend vs. Performance Score (scatter plot)
+- Procurement Spend by Category (treemap)
 
 ### Operational Performance Dashboard
-
-- Monthly Procurement Spend Ranking by Category (Ribbon Chart)
+- Monthly Procurement Spend Ranking by Category (ribbon chart)
 - Monthly On-Time Delivery Trend
 - Procurement Spend by Defect Type
 
@@ -85,40 +74,56 @@ This project simulates a procurement analytics solution for a manufacturing comp
 
 ## Data Model
 
-The report follows a **Star Schema** consisting of:
+The report is built on a **star schema**:
 
-- Fact_PurchaseOrders
-- Supplier_Master
-- Product_Master
-- Quality_Inspection
-- Supplier_Performance_Targets
-- Dedicated Measures Table
+- **Fact_PurchaseOrders** — transactional grain: PO date, spend, quantities
+- **Dim_Supplier** — supplier name, country, supplier category
+- **Product_Master** — product and category hierarchy
+- **Dim_Quality** — defect type reference
+- **Supplier Measure** — a dedicated, disconnected measures table holding all DAX calculations (Total Spend, On-Time Delivery %, Defect Rate %, Supplier Score, Avg Lead Time Days, Total Orders)
+
+Raw source data starts as flat Excel files (see *Project Structure* below) and is cleaned and reshaped into the star schema above using Power Query.
 
 ---
 
 ## Skills Demonstrated
 
-- Power BI
-- DAX
-- Star Schema Modeling
-- Data Modeling
-- KPI Dashboard Design
-- Procurement Analytics
-- Supplier Performance Analysis
-- Interactive Dashboards
-- Data Visualization
+- Power BI & DAX
+- Star schema data modeling
+- Power Query (data cleaning & transformation)
+- KPI dashboard design
+- Procurement & supplier performance analytics
+- Interactive, cross-page filtered dashboards
+- Data visualization (treemap, scatter, ribbon chart, KPI cards)
 
 ---
 
-## Files Included
+## Project Structure
 
-- Procurement_Supplier_Performance_Analytics_Dashboard.pbix
-- Supplier_Master.xlsx
-- Product_Master.xlsx
-- Purchase_Orders.xlsx
-- Quality_Inspection.xlsx
-- Supplier_Performance_Targets.xlsx
-- Supplier Scorebook.xlsx
+```
+📂 screenshots/
+   ├─ Executive Summary.png
+   ├─ Supplier Performance Analysis.png
+   └─ Operational Performance Dashboard.png
+
+📄 Procurement & Supplier Performance Analytics Dashboard.pbix
+📄 Supplier_Master.xlsx
+📄 Product_Master.xlsx
+📄 Purchase_Orders.xlsx
+📄 Quality_Inspection.xlsx
+📄 Supplier_Performance_Targets.xlsx
+📄 Supplier Scorebook.xlsx
+```
+
+---
+
+## Tech Stack
+
+- Power BI Desktop
+- Power Query
+- DAX
+- Microsoft Excel
+- Star schema data modeling
 
 ---
 
@@ -127,52 +132,3 @@ The report follows a **Star Schema** consisting of:
 **Personal Portfolio Project**
 
 **Note:** The dataset used in this project is synthetic and was created to simulate a manufacturing procurement environment for learning and portfolio purposes.
-Project Structure
-
-📂 screenshots/
-    Executive Summary.png
-    Supplier Performance Analysis.png
-    Operational Performance Dashboard.png
-
-📄 Procurement & Supplier Performance Analytics Dashboard.pbix
-
-📄 Product_Master.xlsx
-
-📄 Purchase_Orders.xlsx
-
-📄 Supplier_Master.xlsx
-
-📄 Supplier_Performance_Targets.xlsx
-
-📄 Quality_Inspection.xlsx
-
-📄 Supplier Scorebook.xlsx
-
-Skills Demonstrated
-
-✓ Data Cleaning
-
-✓ Data Modeling
-
-✓ Power Query
-
-✓ DAX
-
-✓ KPI Design
-
-✓ Dashboard Design
-
-✓ Procurement Analytics
-
-✓ Supplier Analytics
-
-✓ Business Intelligence
-
-## Tech Stack
-
-- Power BI Desktop
-- Power Query
-- DAX
-- Microsoft Excel
-- Star Schema Data Modeling
-
