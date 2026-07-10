@@ -37,6 +37,15 @@ This project simulates a procurement analytics solution for a manufacturing comp
 
 ---
 
+## Business Questions Solved
+
+- Which suppliers have the highest performance scores?
+- Which suppliers have the highest defect rates?
+- Which procurement category contributes the most spend?
+- How does procurement spending change month over month?
+- Which suppliers require improvement based on KPIs?
+
+
 ## Dashboard Pages
 
 ### Executive Summary
