@@ -37,6 +37,14 @@ This project simulates a procurement analytics solution for a manufacturing comp
 
 ---
 
+## Key Insights
+
+- Electrical Components account for the highest procurement spend.
+- Overall supplier score is 92.85 with an 89.10% on-time delivery rate.
+- Average supplier lead time is 2 days.
+- Defect rate remains low at 2.61%, indicating strong supplier quality.
+- Monthly procurement spend peaks during April and September.
+
 ## Business Questions Solved
 
 - Which suppliers have the highest performance scores?
@@ -118,8 +126,7 @@ The report follows a **Star Schema** consisting of:
 
 **Personal Portfolio Project**
 
-**Note:** All data used in this project is synthetic and created solely for learning and portfolio purposes.
-
+**Note:** The dataset used in this project is synthetic and was created to simulate a manufacturing procurement environment for learning and portfolio purposes.
 Project Structure
 
 📂 screenshots/
